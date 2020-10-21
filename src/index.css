@@ -77,6 +77,9 @@ code {
 .color-7 {
   background-color: var(--color-7);
 }
+* {
+  box-sizing: border-box;
+}
 
 /* Grid Square */
 .grid-square {
@@ -88,4 +91,11 @@ code {
   border-top-color: var(--border-top-color);
   border-right-color: var(--border-right-color);
   border-bottom-color: var(--border-bottom-color);
+}
+
+.grid-board {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), var(--tile-size));
+  grid-gap: 0;
+  align-self: flex-start;
 }
