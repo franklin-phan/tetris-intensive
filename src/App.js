@@ -11,6 +11,7 @@ import ScoreBoard from './components/ScoreBoard'
 import Controls from './components/Controls'
 import MessagePopup from './components/MessagePopup'
 
+import Music from './components/Music'
 const store = createStore(reducers)
 
 
@@ -19,13 +20,14 @@ function App() {
     <Provider store={store}>
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Tetris Redux</h1>
+          <h1 className="App-title">Tetris</h1>
         </header>
         <GridBoard />
         <NextBlock />
         <ScoreBoard />
         <Controls />
         <MessagePopup />
+        <Music />
       </div>
     </Provider>
   );

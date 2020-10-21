@@ -13,7 +13,7 @@ import {
   } from '../utils'
 
 const gameReducer = (state = defaultState(), action) => {
-  const { shape, grid, x, y, rotation, nextShape, score, isRunning } = state
+  const { shape, grid, x, y, rotation, nextShape, score, isRunning} = state
 
     switch(action.type) {
     case ROTATE:
@@ -29,50 +29,57 @@ const gameReducer = (state = defaultState(), action) => {
     }
     return state
   
-        case MOVE_LEFT:
-          // subtract 1 from the x and check if this new position is possible by calling `canMoveTo()
-          if (canMoveTo(shape, grid, x - 1, y, rotation)) {
-              return { ...state, x: x - 1 }
-          }
-          return state
-  
-          case MOVE_DOWN:
-          // Get the next potential Y position
-          const maybeY = y + 1
-        
-          // Check if the current block can move here
-          if (canMoveTo(shape, grid, x, maybeY, rotation)) {
-              // If so move down don't place the block
-              return { ...state, y: maybeY }
-          }
-        
-          // If not place the block
-          // (this returns an object with a grid and gameover bool)
-          const obj = addBlockToGrid(shape, grid, x, y, rotation)
-          const newGrid = obj.grid
-          const gameOver = obj.gameOver
-        
-          if (gameOver) {
-            // Game Over
-            const newState = { ...state }
-            newState.shape = 0
-            newState.grid = newGrid
-            return { ...state, gameOver: true }
-          }
-        
-            // reset somethings to start a new shape/block
-            const newState = defaultState()
-            newState.grid = newGrid
-            newState.shape = nextShape
-            newState.score = score
-            newState.isRunning = isRunning
+    case MOVE_LEFT:
+      // subtract 1 from the x and check if this new position is possible by calling `canMoveTo()
+      if (canMoveTo(shape, grid, x - 1, y, rotation)) {
+          return { ...state, x: x - 1 }
+      }
+      return state
 
-            // TODO: Check and Set level
-            // Score increases decrease interval
-            newState.score = score + checkRows(newGrid)
+      case MOVE_DOWN:
+      // Get the next potential Y position
+      const maybeY = y + 1
+    
+      // Check if the current block can move here
+      if (canMoveTo(shape, grid, x, maybeY, rotation)) {
+          // If so move down don't place the block
+          return { ...state, y: maybeY }
+      }
+    
+      // If not place the block
+      // (this returns an object with a grid and gameover bool)
+      const obj = addBlockToGrid(shape, grid, x, y, rotation)
+      const newGrid = obj.grid
+      const gameOver = obj.gameOver
+    
+      if (gameOver) {
+        // Game Over
+        const newState = { ...state }
+        newState.shape = 0
+        newState.grid = newGrid
+        return { ...state, gameOver: true }
+      }
+    
+        // reset somethings to start a new shape/block
+        const newState = defaultState()
+        newState.grid = newGrid
+        newState.shape = nextShape
+        newState.score = score
+        newState.isRunning = isRunning
+        
+        // TODO: Check and Set level
+        // Score increases decrease interval
+        newState.score = score + checkRows(newGrid)
+        if (newState.score > 200){
+          newState.level = Math.floor(newState.score/100)
+        }
 
-            return newState
-  
+        if (newState.level > 1){
+          newState.speed = Math.max(200,newState.speed-(newState.level*50))
+        }
+        
+        return newState
+
       case RESUME:
   
         return { ...state, isRunning: true }

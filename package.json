@@ -1,6 +1,6 @@
 {
   "name": "tetris",
-  "homepage": "https://franklin-phan.github.io/tetris-intenive",
+  "homepage": "https://franklin-phan.github.io/tetris-intensive/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,7 +13,8 @@
     "react-keyboard-event-handler": "^1.5.4",
     "react-redux": "^7.2.1",
     "react-scripts": "3.4.4",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "use-sound": "^1.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
