@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/tetris-intenive/static/css/main.cc1277d5.chunk.css",
-    "main.js": "/tetris-intenive/static/js/main.fcd215ed.chunk.js",
-    "main.js.map": "/tetris-intenive/static/js/main.fcd215ed.chunk.js.map",
-    "runtime-main.js": "/tetris-intenive/static/js/runtime-main.2559590f.js",
-    "runtime-main.js.map": "/tetris-intenive/static/js/runtime-main.2559590f.js.map",
-    "static/js/2.3e6ad725.chunk.js": "/tetris-intenive/static/js/2.3e6ad725.chunk.js",
-    "static/js/2.3e6ad725.chunk.js.map": "/tetris-intenive/static/js/2.3e6ad725.chunk.js.map",
-    "index.html": "/tetris-intenive/index.html",
-    "precache-manifest.f01bce38537a54b74356afd607482f2f.js": "/tetris-intenive/precache-manifest.f01bce38537a54b74356afd607482f2f.js",
-    "service-worker.js": "/tetris-intenive/service-worker.js",
-    "static/css/main.cc1277d5.chunk.css.map": "/tetris-intenive/static/css/main.cc1277d5.chunk.css.map",
-    "static/js/2.3e6ad725.chunk.js.LICENSE.txt": "/tetris-intenive/static/js/2.3e6ad725.chunk.js.LICENSE.txt"
+    "main.css": "/tetris-intensive/static/css/main.cc1277d5.chunk.css",
+    "main.js": "/tetris-intensive/static/js/main.cc58d7d9.chunk.js",
+    "main.js.map": "/tetris-intensive/static/js/main.cc58d7d9.chunk.js.map",
+    "runtime-main.js": "/tetris-intensive/static/js/runtime-main.3249a514.js",
+    "runtime-main.js.map": "/tetris-intensive/static/js/runtime-main.3249a514.js.map",
+    "static/js/2.3e6ad725.chunk.js": "/tetris-intensive/static/js/2.3e6ad725.chunk.js",
+    "static/js/2.3e6ad725.chunk.js.map": "/tetris-intensive/static/js/2.3e6ad725.chunk.js.map",
+    "index.html": "/tetris-intensive/index.html",
+    "precache-manifest.fb83edc302757f97f498dd26657eda11.js": "/tetris-intensive/precache-manifest.fb83edc302757f97f498dd26657eda11.js",
+    "service-worker.js": "/tetris-intensive/service-worker.js",
+    "static/css/main.cc1277d5.chunk.css.map": "/tetris-intensive/static/css/main.cc1277d5.chunk.css.map",
+    "static/js/2.3e6ad725.chunk.js.LICENSE.txt": "/tetris-intensive/static/js/2.3e6ad725.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.2559590f.js",
+    "static/js/runtime-main.3249a514.js",
     "static/js/2.3e6ad725.chunk.js",
     "static/css/main.cc1277d5.chunk.css",
-    "static/js/main.fcd215ed.chunk.js"
+    "static/js/main.cc58d7d9.chunk.js"
   ]
 }
