@@ -7,7 +7,7 @@ export default function GridBoard(props) {
 	const game = useSelector((state) => state.game)
 	const { grid, shape, rotation, x, y, isRunning, speed } = game
 
-    const block = shapes[shape][rotation]
+const block = shapes[shape][rotation]
   const blockColor = shape
   // map rows
   const gridSquares = grid.map((rowArray, row) => {
