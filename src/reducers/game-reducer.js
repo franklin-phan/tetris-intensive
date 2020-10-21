@@ -9,7 +9,7 @@ import {
     canMoveTo,
     addBlockToGrid,
     checkRows,
-    randomShape
+    
   } from '../utils'
 
 const gameReducer = (state = defaultState(), action) => {
