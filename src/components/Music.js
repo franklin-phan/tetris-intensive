@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const useAudio = url => {
   const [audio] = useState(new Audio());
-  audio.src = "https://www.mboxdrive.com/TetrisTheme.mp3"
+  audio.src = "https://www.mboxdrive.com/rickroll.mp3"
   audio.loop = true
   const [playing, setPlaying] = useState(false);
 
